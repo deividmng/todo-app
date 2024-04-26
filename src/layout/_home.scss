@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr;
+    margin-top: 10px;
+    gap: 1rem;
+}
+
+
+.content-container {
+    background-color: aqua;
+}
