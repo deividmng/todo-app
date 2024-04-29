@@ -10,3 +10,25 @@
 .content-container {
     background-color: aqua;
 }
+
+// this one is the one that makes it form desaper 
+.show {
+    display: none;
+}
+.form-present {
+    filter: blur(5px); /* Aplica un filtro de desenfoque al body cuando tenga la clase form-present */
+}
+
+
+
+.active {
+    background-color: red;
+}
+.todo-form {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 31; /* Asegura que el formulario esté en el frente y no detrás del fondo borroso */
+    
+}

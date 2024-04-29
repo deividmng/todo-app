@@ -18,6 +18,7 @@ const createGeneralHomePage = () => {
     const newTaskButton = document.createElement("button");
     newTaskButton.setAttribute("id", "button-task");
     newTaskButton.textContent = "Add Task";
+    
 
     // Agregar los elementos al contenido de la página
     pageContent.appendChild(general);
@@ -33,7 +34,27 @@ const createGeneralHomePage = () => {
         content.innerHTML = '';
         // Agregar el contenedor de datos del formulario al contenido de la página
         content.appendChild(formDataContainer);
+        document.body.classList.add("active");
     });
+
+    const formDataContainer = document.createElement("div");
+        formDataContainer.classList.add("form-data-container");
+
+        const titleElement = document.createElement("p");
+        titleElement.textContent = "Titledddd: " + title;
+
+        const descriptionElement = document.createElement("p");
+        descriptionElement.textContent = "Description: " + description;
+
+        const dueDateElement = document.createElement("p");
+        dueDateElement.textContent = "Due Date: " + dueDate;
+
+        const priorityElement = document.createElement("p");
+        priorityElement.textContent = "Priority: " + priority;
+
+        const checklistElement = document.createElement("p");
+        checklistElement.textContent = "Checklist: " + (checklist ? "Yes" : "No");
+
 };
 
 

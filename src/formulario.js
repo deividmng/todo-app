@@ -19,9 +19,11 @@
 //     });
 // }
 
+
+
 export function createToDoForm() {
-    const content = document.querySelector("#content");
-    content.innerHTML = ''; // Limpiar el contenido anterior si lo hay
+    // const content = document.querySelector("#content");
+    // content.innerHTML = ''; // Limpiar el contenido anterior si lo hay
    
 
 
@@ -125,8 +127,20 @@ export function createToDoForm() {
     submitButton.setAttribute("type", "submit");
     submitButton.textContent = "Submit";
 
+//     // Agregar evento click al botón de enviar
+// submitButton.addEventListener("click", function(event) {
+//     // Prevenir el comportamiento predeterminado del botón de enviar
+//     event.preventDefault();
+    
+//     // Redirigir a la página principal
+//     window.location.href = "../dist/index.html";
+// });
+
+    
+
     submitButton.addEventListener("click", function () {
         form.classList.toggle("show");
+    
 });
 
     const resetButton = document.createElement("button");
@@ -189,7 +203,7 @@ export function createToDoForm() {
         formDataContainer.classList.add("form-data-container");
 
         const titleElement = document.createElement("p");
-        titleElement.textContent = "Titledddd: " + title;
+        titleElement.textContent = "Titledd: " + title;
 
         const descriptionElement = document.createElement("p");
         descriptionElement.textContent = "Description: " + description;
@@ -216,6 +230,9 @@ export function createToDoForm() {
         // Limpiar el formulario después de enviar
         form.reset();
     });
+
+    // Aplicar clase al body cuando el formulario está presente
+    // classList.add('form-present');
     return formDataContainer;
 }
 
